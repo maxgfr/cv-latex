@@ -1,0 +1,113 @@
+\ProvidesPackage{cv}
+%\RequirePackage[pdftex]{hyperref}
+\RequirePackage{metalogo}
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{orange}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+
+%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\ifxetexorluatex
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\newfontfamily{\githubfont}{Octicons}
+\newfontfamily{\linkedinfont}{Myriad Pro}
+\else
+\newcommand\githubfont{}
+\newcommand\linkedinfont{}
+\fi
+
+\usepackage{microtype}
+
+\newcommand\octocat{{\githubfont\char"F209}}
+\newcommand\linkedin{%
+\scalebox{0.7}{%
+\begin{tikzpicture}[baseline]%
+\node[fill=color2,rounded corners=2pt,anchor=base] {%
+\linkedinfont\bfseries\upshape\color{white}{in}%
+};%
+\end{tikzpicture}}}
+
+% personal data
+\title{Ing\'enieur en informatique}
+\firstname{Maxime}
+\familyname{Golfier}
+\address{Rue du C\'ezallier - Lot l'Esterel}{63500~Issoire}
+\mobile{+33 6 21 64 53 71}
+%\phone{}
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{maxgolfier@gmail.com}
+%\homepage{www.maxgolfier.info}
+\extrainfo{
+\linkedin~\httplink{www.linkedin.com/in/maxime-golfier}
+%\octocat~\url{http://github.com/maxgfr}
+}
+\photo[64pt]{identity}
+
+
+\AtBeginDocument{\renewcommand{\labelitemi}{-- }}
+
+\usepackage[firstyear=2015,lastyear=2021]{moderntimeline}
+%\tlmaxdates{2015}{2017}
+\tlwidth{0.8ex}
+
+
+% Proper alignment
+\usepackage[originalcommands]{ragged2e}
+\renewcommand*{\cvcomputer}[4]{%
+  \cvdoubleitem{\bfseries#1}{\small\raggedright#2}{\bfseries#3}{\small\raggedright#4}}
+
+% Not all fonts have an sl shape
+\renewcommand*{\cventry}[6]{%
+  \cvline{#1}{%
+    {\bfseries#2}%
+    \ifx#3\else{, {\itshape#3}}\fi%
+    \ifx#4\else{, #4}\fi%
+    \ifx#5\else{, #5}\fi%
+    .%
+    \ifx#6\else{\newline{}\begin{minipage}[t]{\linewidth}\small#6\end{minipage}}\fi
+    }}%
+
+
+% Refine quote 
+\newcommand*{\myquote}[2]{%
+   \quote{\itshape #1 \\ \scshape \footnotesize #2}}
+
+% Hobbies
+\newcommand*{\cvhobby}[2]{\cvline{#1}{\small #2}}
+
+
+% Developer/Contributor footnotes
+\usepackage[bottom,norule,symbol*]{footmisc}
+\newcommand*{\devnotes}[2]{%
+\vfill
+\footnotetext[1]{#1}
+\footnotetext[2]{#2}
+}
+
+\newcommand*{\developer}{\footnotemark[1]}
+\newcommand*{\contributor}{\footnotemark[2]}
+

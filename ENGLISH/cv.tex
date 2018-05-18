@@ -1,0 +1,75 @@
+%% start of file `cv.tex'.
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\usepackage{cv}
+
+\usepackage[french]{babel}
+
+\linespread{0.9}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+
+\renewcommand{\labelitemi}{-- }
+
+\section{Education}
+\tllabelcventry{2017}{2020}{2017}{Master Degree}{\href{http://www.isep.fr/}{Isep}}{Paris - France}{}{}
+\tldatecventry{2017}{Licence Degree}{\href{http://programmes.uqac.ca/7833}{UQAC}}{Chicoutimi - Canada}{}{4.0/4.3}
+\tllabelcventry{2015}{2017}{2015 -- 2017}{Two-year diploma in Computer Science}{\href{https://iutweb.u-clermont1.fr/sfTestXml/formation?idFormation=11167}{Universit\'e d'Auvergne}}{Clermont-Ferrand - France}{}{}
+
+\section{Professional experiences}
+\cventry{11/17--today}{Architect cognitive computing and cloud}{IBM France}{Bois-Colombes, France}{}{}
+\cventry{05/17--07/17}{Student researcher in Deep Learning}{Robert Gordon University}{Aberdeen, United Kingdom}{}{}
+\cventry{10/16--12/16}{Tutor}{Universit\'e d'Auvergne}{Clermont-Ferrand, France}{}{}
+\cventry{07/16--08/16}{Waiter}{Rosaparks}{Paris, France}{}{}
+
+\section{Computer Skills}
+\cvcomputer	{Programming languages}{C, Pro-C, Shell (Bash), Java 8, FXML, PHP7, JavaScript, CSS, HTML5, Arduino, PL/SQL, C\# / .NET + XAML/WPF, C++, Python, Android, LaTeX, Android Wear, DeepLearning4J, TensorFlow, NodeJS, Swift}
+						{Databases}{Oracle, MariaDB, Microsoft SQL Server, Cloudant}
+\cvcomputer	{Methodology of applications}{Entity relationship model, UML, design patterns, SCRUM}
+						{OS and Network}{Linux, Windows, Network Services, IBM Cloud Private (Kubernetes/Docker)}
+\cvcomputer	{Programming software}{WordPress, Drupal, Eclipse, NetBeans, Visual Studio, Project, Scillab, Octave, Android Studio}
+						{Graphics and video editors}{Adobe Photoshop, Adobe After Effect, Adobe Premiere}
+
+\section{Language skills}
+\cvlanguage{French}{Native language}{}
+\cvlanguage{English}{Speak fluently}{}
+\cvlanguage{Italian, German}{Pre-intermediate level}{}
+
+\section{Interests}
+\cvcomputer	{Programming}{+30 repo on github.com/maxgfr}
+						{Sport}{Running and swimming each week}
+						
+
+%\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                   % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}              % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}              % 'publications' is the name of a BibTeX file
+\end{document}
+
+
+%% end of file `cv.tex'.

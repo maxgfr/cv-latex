@@ -1,0 +1,75 @@
+%% start of file `cv.tex'.
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\usepackage{cv}
+
+\usepackage[french]{babel}
+
+\linespread{0.9}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+
+\renewcommand{\labelitemi}{-- }
+
+\section{Formation}
+\tllabelcventry{2017}{2020}{2017}{Dipl\^ome Ing\'enieur}{\href{http://www.isep.fr/}{Isep}}{Paris - France}{}{Parcours en alternance}
+\tldatecventry{2017}{Baccalaur\'eat Informatique - L3 Informatique}{\href{http://programmes.uqac.ca/7833}{UQAC}}{Chicoutimi - Canada}{}{C\^ote 4.0/4.3}
+\tllabelcventry{2015}{2017}{2015 -- 2017}{DUT Informatique}{\href{https://iutweb.u-clermont1.fr/sfTestXml/formation?idFormation=11167}{Universit\'e d'Auvergne}}{Clermont-Ferrand - France}{}{\'Etudiant/Tuteur}
+\tldatecventry{2015}{Parcours scientifique}{Lyc\'ee S\'evign\'e Saint-Louis}{Issoire - France}{}{Baccalaur\'eat S\'erie Scientifique obtenu avec mention Bien}{}
+
+\section{Exp\'eriences professionnelles}
+\cventry{11/17--07/20}{Architecte Junior "Cognitive Computing"}{IBM}{Paris, Fran\c{c}ais}{}{Contribution \`a des projets clients en avant-vente dans le domaine du cognitive}
+\cventry{05/17--07/17}{Stage recherche}{Robert Gordon University}{Aberdeen, Royaume-Uni}{}{Detection d'activit\'e via le deep learning}
+\cventry{10/16--12/16}{Tuteur}{Universit\'e d'Auvergne}{Clermont-Ferrand, France}{}{}
+\cventry{07/16--08/16}{Serveur}{Rosaparks}{Clermont-Ferrand, France}{}{}
+
+\section{Comp\'etences acquises en informatique}
+\cvcomputer	{Langages informatiques}{C, Pro-C, Bash, Android, Android Wear, Java (DeepLearning4J, ND4J), PHP (Laravel, Symfony), Arduino, PL/SQL, C\#, C++, Python (tensorflow, numpy), Javascript (Node JS)}
+						{Syst\`emes de gestion de bases de donn\'ees}{Oracle, MariaDB, Microsoft SQL Server, phpMyAdmin}
+\cvcomputer	{M\'ethodologies et langages}{Mod\`ele entit\'e - association, UML, design patterns, M\'ethodes Agiles (SCRUM) et Gestion de projet}
+						{Syst\`emes d'exploitation et r\'eseaux}{Linux, Windows, administration de r\'eseaux locaux (Ethernet/Wifi + Nat, routage, services usuels...)}
+
+\section{Langues}
+\cvlanguage{Anglais}{Courant}{Pratique r\'eguli\'ere, plusieurs s\'ejours \`a l'\'etranger}
+\cvlanguage{Italien, Allemand}{Scolaire}{Quelques notions}
+
+\section{Centres d'int\'er\^et}
+\cvcomputer	{Open-Source}{Une trentaine de repositories sur github.com/maxgfr}
+			{Trading}{Etude du march\'e des cryptomonnaies}
+\cvcomputer	{Sport}{Natation, Football, Course \`a pied} 
+			{Autres}{Amateur de films (Fr\`eres Coen, Tarantino, etc.)}	
+						
+
+%\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                   % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}              % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}              % 'publications' is the name of a BibTeX file
+\end{document}
+
+
+%% end of file `cv.tex'.
